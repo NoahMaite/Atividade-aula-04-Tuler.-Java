@@ -1,0 +1,23 @@
+/* Nayara Pereira Soares
+/*
+ * 5. Ao executar o seguinte programa, temos como resultado: "eabcdebcdecde".
+ * Adicione apenas uma sentença na linha 21 e altere a saída para "ede".
+ */
+
+public class MyClass {
+    public static void main(String[] args) {
+        int n = 0;
+        while (n < 5) {
+            n++;
+            switch (n) {
+                case 2: System.out.print("a"); break;
+                case 3: System.out.print("b"); break;
+                case 4: System.out.print("c"); break;
+                case 5: System.out.print("d"); break;
+                default: System.out.print("e"); break;
+            }
+        }
+      
+        System.out.print("ede");
+    }
+}
