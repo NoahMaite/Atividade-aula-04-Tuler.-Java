@@ -1,0 +1,29 @@
+/* Nayara Pereira Soares
+ * 4. Dado o código abaixo, explique a sua saída:
+ * 
+ * public class MySwitch {
+ *     public static void main(String[] args) {
+ *         int x = 2;
+ *         switch(x) {
+ *             case 1:
+ *                 x += 2;
+ *                 break;
+ *             case 2:
+ *                 x++;
+ *             case 3:
+ *                 x += 4;
+ *             default:
+ *                 x += 2;
+ *         }
+ *         System.out.print(x);
+ *     }
+ * }
+ * 
+ * Explicação:
+ * - x inicia com 2 e entra no case 2.
+ * - Como não há break, ele continua executando os próximos cases (fall-through).
+ * - x++ → x = 3
+ * - x += 4 (case 3) → x = 7
+ * - x += 2 (default) → x = 9
+ * - Saída: 9
+ */
