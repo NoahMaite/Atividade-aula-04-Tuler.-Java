@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+/* Nayara Pereira Soares
+ * 2. Crie um programa que permite executar uma expressão matemática simples,
+ * semelhante a "17 + 3" e "3.14159 * 4.7". A expressão deve ser digitada pelo usuário.
+ * A entrada será um número, seguido de um operador (+, -, *, /) e outro número.
+ * O programa deve calcular o resultado e encerrar se o primeiro número for 0.
+ * Deve-se utilizar o comando switch.
+ */
+
+public class Calculadora {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Digite a operação (ex: 5 + 3): ");
+            double num1 = scanner.nextDouble();
+            if (num1 == 0) break;
+            
+            char operador = scanner.next().charAt(0);
+            double num2 = scanner.nextDouble();
+
+            switch (operador) {
+                case '+': System.out.println("Resultado: " + (num1 + num2)); break;
+                case '-': System.out.println("Resultado: " + (num1 - num2)); break;
+                case '*': System.out.println("Resultado: " + (num1 * num2)); break;
+                case '/': 
+                    if (num2 != 0) System.out.println("Resultado: " + (num1 / num2));
+                    else System.out.println("Erro: divisão por zero!");
+                    break;
+                default: System.out.println("Operador inválido!");
+            }
+        }
+        scanner.close();
+    }
+}
